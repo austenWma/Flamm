@@ -7,6 +7,8 @@ import Dehaze from 'material-ui/svg-icons/image/dehaze';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme.js';
 
+import $ from 'jquery'
+
 const muiTheme = getMuiTheme({
     ripple: {
         color: 'white',
@@ -21,6 +23,25 @@ class LandingWelcome extends Component {
       };
   }
 
+  componentDidMount() {
+        $(".landingWelcomeTabsContainer").animate({
+            height: "toggle",
+            opacity: "toggle"
+        }, 0);
+        $('.landingWelcomeMenuButton').click(() => {
+            $(".landingWelcomeTabsContainer").animate({
+                height: "toggle",
+                opacity: "toggle"
+            }, 300);
+        });
+
+        $(".landingWelcomeTab").hover(() => {
+            $(this).animate({
+                borderBottom: '2px solid white',
+            }, 250);
+        });
+  }
+
   render() {
     return (
       <div>
@@ -29,6 +50,20 @@ class LandingWelcome extends Component {
             <div className="landingWelcomeTitle">
                 F L A M M
             </div>
+            <div className="landingWelcomeTabsContainer">
+                <div className="landingWelcomeTab">
+                    About
+                </div>
+                <div className="landingWelcomeTab">
+                    How it Works
+                </div>
+                <div className="landingWelcomeTab">
+                    The Team
+                </div>
+                <div className="landingWelcomeTab">
+                    Contact
+                </div>
+            </div>
             <div className="landingWelcomeMenuButton">
                 <IconButton iconStyle={{width: '75', height: '75', color: 'white'}} style={{width: '120', height: '120'}}>
                     <Dehaze />
@@ -36,7 +71,12 @@ class LandingWelcome extends Component {
             </div>
         </div>
         </MuiThemeProvider>
-        <div>
+        <div className="landingWelcomeContentContainer">
+            <div className="landingWelcomeContentPictureContainer">
+                <div className="landingWelcomeContentCaption">
+                    Your Studio, In the Cloud
+                </div>
+            </div>
         </div>
       </div>
     )

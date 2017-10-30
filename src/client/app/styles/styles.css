@@ -7,6 +7,7 @@
     border-color: blue;
     background-image: url('http://www.eshermedia.com/wp-content/uploads/2015/07/contact-us-background-1920-2.jpg');
     background-repeat: no-repeat;
+    background-size: contain;
     opacity: 0.9;
 }
 .landingDescriptionContainer {
@@ -20,21 +21,52 @@
     width: 100%;
     border-style: solid;
     border-color: green;
+    display: flex;
+    align-items: center; 
 }
 .landingWelcomeTitle {
-    min-width: 300px;
+    min-width: 400px;
     height: 100%;
     padding-top: 1%;
-    display: inline;
-    float: left;
     margin-left: 2%;
     font-family: 'Audiowide', cursive;
     font-size: 400%;
     color: white;
-    border-style: solid;
-    border-color: white;
+}
+.landingWelcomeTabsContainer {
+    display: flex;
+    align-items: center; 
+    margin-left: 35%;
+    width: 35%;
+}
+.landingWelcomeTab {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-weight: 100;
+    font-size: 200%;
+    margin-left: 7%;
 }
 .landingWelcomeMenuButton {
-    display: inline;
-    float: right;
+    margin-left: 93%;
+    position: absolute;
+}
+
+.landingWelcomeContentContainer {
+    height: 87%;
+    border-style: solid;
+    border-color: pink;
+}
+.landingWelcomeContentPictureContainer {
+    height: 60%;
+    display: flex;
+    align-items: center;
+    border-style: solid;
+    border-color: yellow;
+}
+.landingWelcomeContentCaption {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-weight: 300;
+    font-size: 400%;
+    margin-left: 35%;
 }
