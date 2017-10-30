@@ -35,15 +35,15 @@
 .landingWelcomeTabsContainer {
     display: flex;
     align-items: center; 
-    margin-left: 5%;
-    width: 700px;
+    margin: 0 auto;
+    width: 60%;
 }
 .landingWelcomeTab {
     font-family: 'Roboto', sans-serif;
     color: white;
     font-weight: 100;
-    font-size: 200%;
-    margin-left: 7%;
+    font-size: 150%;
+    margin-left: 10%;
 }
 .landingWelcomeMenuButton {
     margin-left: 90%;
