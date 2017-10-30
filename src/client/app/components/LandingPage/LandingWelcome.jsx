@@ -11,7 +11,7 @@ import $ from 'jquery'
 
 const muiTheme = getMuiTheme({
     ripple: {
-        color: 'white',
+        color: 'blue',
     },
 });
 
@@ -65,7 +65,7 @@ class LandingWelcome extends Component {
                 </div>
             </div>
             <div className="landingWelcomeMenuButton">
-                <IconButton iconStyle={{width: '75', height: '75', color: 'white'}} style={{width: '120', height: '120'}}>
+                <IconButton iconStyle={{width: '75', height: '75'}} style={{width: '120', height: '120'}}>
                     <Dehaze />
                 </IconButton> 
             </div>
