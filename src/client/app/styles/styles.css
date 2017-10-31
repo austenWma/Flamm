@@ -3,12 +3,12 @@
 .landingWelcomeContainer {
     height: 100%;
     width: 100%;
+    z-index: 2;
     border-style: solid;
     border-color: blue;
-    /* background-image: url('http://www.eshermedia.com/wp-content/uploads/2015/07/contact-us-background-1920-2.jpg'); */
+    /* background-image: url('http://www.eshermedia.com/wp-content/uploads/2015/07/contact-us-background-1920-2.jpg');
     background-repeat: no-repeat;
-    background-size: contain;
-    opacity: 0.9;
+    background-size: contain; */
 }
 .landingDescriptionContainer {
     height: 100%;
@@ -18,7 +18,7 @@
 }
 .landingWelcomeTabBarContainer {
     height: 13%;
-    width: 100%;
+    width: 99.9%;
     border-style: solid;
     border-color: green;
     display: flex;
@@ -37,6 +37,7 @@
     align-items: center; 
     margin: 0 auto;
     width: 60%;
+    justify-content: center;
 }
 .landingWelcomeTab {
     font-family: 'Roboto', sans-serif;
@@ -45,17 +46,17 @@
     margin-left: 10%;
 }
 .landingWelcomeMenuButton {
-    margin-left: 90%;
-    position: absolute;
+    margin-left: 91%;
+    position: fixed;
+    z-index: 10;
 }
 
 .landingWelcomeContentContainer {
     height: 87%;
-    border-style: solid;
-    border-color: pink;
 }
 .landingWelcomeContentPictureContainer {
     height: 70%;
+    width: 99.9%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,4 +67,114 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 400%;
+}
+.landingMenuBarClosed {
+    height: 100%;
+    width: 0%;
+    z-index: -1;
+    float: right;
+    position: fixed;
+}
+.landingMenuBarOpen {
+    margin-left: 80%;
+    height: 100%;
+    width: 20%;
+    z-index: 5;
+    position: fixed;
+    border-style: solid;
+    border-color: black;
+}
+
+.c-hamburger {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 96px;
+    height: 96px;
+    font-size: 0;
+    text-indent: -9999px;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.c-hamburger:focus {
+    outline: none;
+}
+.c-hamburger span {
+    display: block;
+    position: absolute;
+    top: 44px;
+    left: 18px;
+    right: 18px;
+    height: 8px;
+    background: Black;
+}
+  
+.c-hamburger span::before,
+.c-hamburger span::after {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: black;
+    content: "";
+}
+
+.c-hamburger span::before {
+    top: -20px;
+}
+
+.c-hamburger span::after {
+    bottom: -20px;
+}
+.c-hamburger--htx {
+    background-color: white;
+}
+  
+.c-hamburger--htx span {
+    transition: background 0s 0.3s;
+}
+  
+.c-hamburger--htx span::before,
+.c-hamburger--htx span::after {
+    transition-duration: 0.3s, 0.3s;
+    transition-delay: 0.3s, 0s;
+}
+  
+.c-hamburger--htx span::before {
+    transition-property: top, transform;
+}
+  
+.c-hamburger--htx span::after {
+    transition-property: bottom, transform;
+}
+  
+  /* active state, i.e. menu open */
+.c-hamburger--htx.is-active {
+    background-color: white;
+}
+
+.c-hamburger--htx.is-active span {
+    background: none;
+}
+
+.c-hamburger--htx.is-active span::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.c-hamburger--htx.is-active span::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+.c-hamburger--htx.is-active span::before,
+.c-hamburger--htx.is-active span::after {
+    transition-delay: 0s, 0.3s;
 }

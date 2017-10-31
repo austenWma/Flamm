@@ -2,85 +2,68 @@ import React, {Component} from 'react'
 import {render} from 'react-dom'
 import {Redirect, Link} from 'react-router-dom'
 
-import IconButton from 'material-ui/IconButton';
-import Dehaze from 'material-ui/svg-icons/image/dehaze';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import getMuiTheme from 'material-ui/styles/getMuiTheme.js';
+import SideBar from 'react-fixed-sidebar';
 
 import $ from 'jquery'
 
-const muiTheme = getMuiTheme({
-    ripple: {
-        color: 'blue',
-    },
-});
-
 class LandingWelcome extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-        
-      };
-  }
+    constructor (props) {
+        super(props)
+        this.state = {
+        };
+        this.openMenu = this.openMenu.bind(this)
+    }
 
-  componentDidMount() {
-        $(".landingWelcomeTabsContainer").animate({
-            height: "toggle",
-            opacity: "toggle"
-        }, 0);
-        $('.landingWelcomeMenuButton').click(() => {
-            $(".landingWelcomeTabsContainer").animate({
-                height: "toggle",
-                opacity: "toggle"
-            }, 300);
-        });
+    componentDidMount() {
+        (function() {
 
-        $(".landingWelcomeTab").hover(() => {
-            $(this).animate({
-                borderBottom: '2px solid white',
-            }, 250);
-        });
-  }
+            "use strict";
 
-  render() {
-    return (
-      <div>
-        <MuiThemeProvider muiTheme={muiTheme}>
-        <div className="landingWelcomeTabBarContainer">
-            <div className="landingWelcomeTitle">
-                F L A M M
+            var toggles = document.querySelectorAll(".c-hamburger");
+
+            for (var i = toggles.length - 1; i >= 0; i--) {
+                var toggle = toggles[i];
+                toggleHandler(toggle);
+            };
+
+            function toggleHandler(toggle) {
+                toggle.addEventListener( "click", function(e) {
+                e.preventDefault();
+                (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
+                });
+            }
+
+        })();
+
+    }
+
+    openMenu(event) {
+        this.props.toggleMenu()
+    }
+
+    render() {
+        return (
+            <div>
+                <div className="landingWelcomeTabBarContainer">
+                    <div className="landingWelcomeTitle">
+                        F L A M M
+                    </div>
+                    <div className="landingWelcomeMenuButton">
+                        <button className="c-hamburger c-hamburger--htx" onClick={this.openMenu}>
+                            <span>toggle menu</span>
+                        </button>
+                    </div>
+                </div>
+                <div className="landingWelcomeContentContainer">
+                    <div className="landingWelcomeContentPictureContainer">
+                        <div className="landingWelcomeContentCaption">
+                            Your Studio, In the Cloud
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className="landingWelcomeTabsContainer">
-                <div className="landingWelcomeTab">
-                    About
-                </div>
-                <div className="landingWelcomeTab">
-                    How it Works
-                </div>
-                <div className="landingWelcomeTab">
-                    The Team
-                </div>
-                <div className="landingWelcomeTab">
-                    Contact
-                </div>
-            </div>
-            <div className="landingWelcomeMenuButton">
-                <IconButton iconStyle={{width: '75', height: '75'}} style={{width: '120', height: '120'}}>
-                    <Dehaze />
-                </IconButton> 
-            </div>
-        </div>
-        </MuiThemeProvider>
-        <div className="landingWelcomeContentContainer">
-            <div className="landingWelcomeContentPictureContainer">
-                <div className="landingWelcomeContentCaption">
-                    Your Studio, In the Cloud
-                </div>
-            </div>
-        </div>
-      </div>
-    )
-  }
-}
+        )
+    }
+    }
 
 export default LandingWelcome;
