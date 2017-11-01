@@ -10,12 +10,81 @@
     background-repeat: no-repeat;
     background-size: contain; */
 }
-.landingDescriptionContainer {
+
+
+
+
+
+
+
+
+
+
+.landingTabContentContainer {
     height: 100%;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 300%;
     border-style: solid;
     border-color: red;
 }
+.landingTabContentContainer1 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 300%;
+    border-style: solid;
+    border-color: red;
+}
+.landingTabContentContainer2 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 300%;
+    border-style: solid;
+    border-color: red;
+}
+.landingTabContentContainer3 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 300%;
+    border-style: solid;
+    border-color: red;
+}
+.landingTabContentContainer4 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 300%;
+    border-style: solid;
+    border-color: red;
+}
+
+
+
+
+
+
+
+
+
+
 .landingWelcomeTabBarContainer {
     height: 13%;
     width: 99.9%;
@@ -93,7 +162,23 @@
 .landingMenuBarContainer {
 
 }
-
+.landingMenuBarPlaceholder {
+    border-style: solid;
+    border-color: orange;
+    width: 100%;
+    height: 15%;
+}
+.landingMenuBarTabs {
+    border-style: solid;
+    border-color: orange;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 150%;
+}
 
 
 
