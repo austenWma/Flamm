@@ -23,7 +23,7 @@ class LandingPage extends Component {
   }
 
   toggleMenu() {
-    $('.landingMenuBar').slideToggle(350)
+    $('.landingMenuBar').slideToggle(250)
   }
 
   scrollToTab(tabN) {

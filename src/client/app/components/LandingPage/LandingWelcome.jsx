@@ -52,9 +52,6 @@ class LandingWelcome extends Component {
                         <div className="landingWelcomeTitleLogo">
                             <img src={'http://i66.tinypic.com/2zgu68p.png'} style={{height: '100%', width: '100%', marginTop: '10%'}} />
                         </div>
-                        <div className="landingWelcomeTitleText">
-                            F L A M M
-                        </div>
                     </div>
                     <div className="landingWelcomeMenuButton">
                         <button className="c-hamburger c-hamburger--htx" onClick={this.openMenu}>

@@ -4,8 +4,6 @@
     height: 100%;
     width: 100%;
     z-index: 2;
-    border-style: solid;
-    border-color: blue;
     /* background-image: url('http://www.eshermedia.com/wp-content/uploads/2015/07/contact-us-background-1920-2.jpg');
     background-repeat: no-repeat;
     background-size: contain; */
@@ -28,8 +26,6 @@
     justify-content: center;
     font-family: 'Lato', sans-serif;
     font-size: 300%;
-    border-style: solid;
-    border-color: red;
 }
 .landingTabContentContainer1 {
     height: 100%;
@@ -39,8 +35,6 @@
     justify-content: center;
     font-family: 'Lato', sans-serif;
     font-size: 300%;
-    border-style: solid;
-    border-color: red;
 }
 .landingTabContentContainer2 {
     height: 100%;
@@ -50,8 +44,6 @@
     justify-content: center;
     font-family: 'Lato', sans-serif;
     font-size: 300%;
-    border-style: solid;
-    border-color: red;
 }
 .landingTabContentContainer3 {
     height: 100%;
@@ -61,8 +53,6 @@
     justify-content: center;
     font-family: 'Lato', sans-serif;
     font-size: 300%;
-    border-style: solid;
-    border-color: red;
 }
 .landingTabContentContainer4 {
     height: 100%;
@@ -72,8 +62,6 @@
     justify-content: center;
     font-family: 'Lato', sans-serif;
     font-size: 300%;
-    border-style: solid;
-    border-color: red;
 }
 
 
@@ -88,31 +76,16 @@
 .landingWelcomeTabBarContainer {
     height: 13%;
     width: 99.9%;
-    border-style: solid;
-    border-color: green;
     display: flex;
     align-items: center; 
     vertical-align: middle;
-}
-.landingWelcomeTitle {
-    min-width: 500px;
-    height: 100%;
-    margin-left: 1%;
-    display: flex;
-    align-items: center; 
-    vertical-align: middle;
-    font-family: 'Lato', sans-serif;
-    font-size: 400%;
-}
-.landingWelcomeTitleText {
-    display: inline-block;
 }
 .landingWelcomeTitleLogo {
-    width: 7vw;
-    height: 7vw;
+    width: 9vw;
+    height: 9vw;
+    margin-left: 15%;
+    margin-top: 30%;
     display: inline-block;
-    border-style: solid;
-    border-color: grey;
 }
 .landingWelcomeTabsContainer {
     display: flex;
@@ -142,8 +115,6 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    border-style: solid;
-    border-color: yellow;
 }
 .landingWelcomeContentPictureContainer2 {
     height: 15%;
@@ -151,8 +122,6 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    border-style: solid;
-    border-color: yellow;
 }
 .landingWelcomeContentPictureContainer3 {
     height: 15%;
@@ -160,8 +129,6 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    border-style: solid;
-    border-color: yellow;
 }
 .landingWelcomeContentPictureContainer4 {
     height: 30%;
@@ -169,8 +136,6 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    border-style: solid;
-    border-color: orange;
 }
 .landingWelcomeContentCaption1 {
     font-family: 'Lato', sans-serif;
@@ -197,21 +162,15 @@
     width: 20%;
     z-index: 5;
     position: fixed;
-    border-style: solid;
-    border-color: black;
 }
 .landingMenuBarContainer {
 
 }
 .landingMenuBarPlaceholder {
-    border-style: solid;
-    border-color: orange;
     width: 100%;
     height: 15%;
 }
 .landingMenuBarTabs {
-    border-style: solid;
-    border-color: orange;
     width: 100%;
     height: 15%;
     display: flex;
