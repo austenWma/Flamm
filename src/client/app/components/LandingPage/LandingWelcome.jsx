@@ -2,7 +2,10 @@ import React, {Component} from 'react'
 import {render} from 'react-dom'
 import {Redirect, Link} from 'react-router-dom'
 
-import SideBar from 'react-fixed-sidebar';
+import SideBar from 'react-fixed-sidebar'
+
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import RaisedButton from 'material-ui/RaisedButton'
 
 import $ from 'jquery'
 
@@ -60,10 +63,25 @@ class LandingWelcome extends Component {
                     </div>
                 </div>
                 <div className="landingWelcomeContentContainer">
-                    <div className="landingWelcomeContentPictureContainer">
-                        <div className="landingWelcomeContentCaption">
-                            Your Studio, In the Cloud
+                    <div className="landingWelcomeContentPictureContainer1">
+                        <div className="landingWelcomeContentCaption1">
+                            YOUR STUDIO, IN THE CLOUD
                         </div>
+                    </div>
+                    <div className="landingWelcomeContentPictureContainer2">
+                        <div className="landingWelcomeContentCaption2">
+                            Flamm is the best way to collaborate on music projects from start to finish
+                        </div>
+                    </div>
+                    <div className="landingWelcomeContentPictureContainer3">
+                        <div className="landingWelcomeContentDownloadButton">
+                            <MuiThemeProvider>
+                                <RaisedButton label="Download" primary={true} fullWidth={true} buttonStyle={{backgroundColor: "#19e495", width: '200px'}}/>
+                            </MuiThemeProvider>
+                        </div>
+                    </div>
+                    <div className="landingWelcomeContentPictureContainer4">
+                        <img src="http://i65.tinypic.com/x2vrr5.png" border="0" className="landingWelcomeContentPictureBottom" />
                     </div>
                 </div>
             </div>
